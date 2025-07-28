@@ -1,0 +1,149 @@
+/* ================== GLOBAL STYLES ================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+/* ================== NAVBAR ================== */
+.navbar {
+    background: linear-gradient(90deg, #612e50, #337696);
+    padding: 20px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white !important;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 50px;
+    margin-right: 12px;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 22px;
+    transition: all 0.4s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+    color: #ffe600 !important;
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+/* ================== HERO SECTION ================== */
+.hero-section {
+    background: url('images/emvs.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    font-size: 2rem;
+    max-width: 600px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin: 15px 0;
+}
+
+
+/* ================== FOOTER ================== */
+footer {
+    background: #ff416c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+/* ================== RESPONSIVE DESIGN ================== */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .about-section h2 {
+        font-size: 2rem;
+    }
+
+    .contact-section {
+        padding: 30px;
+    }
+
+    .gallery-container img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+.title1 {
+    font-size: 2.5rem;  /* Large and readable */
+    font-weight: bold;
+    background: linear-gradient(90deg, #312323, #966333);
+    color: #ffffff;  /* White text for better contrast */
+    text-align: center;  /* Center the text */
+    padding: 15px 25px;  /* More padding for better spacing */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);  /* Deeper shadow for a stronger 3D effect */
+    text-transform: uppercase;  /* Bold uppercase letters */
+    letter-spacing: 2px;  /* Adds spacing between letters for readability */
+    transition: all 0.3s ease-in-out;  /* Smooth hover effect */
+}
+
+.title1:hover {
+    background: linear-gradient(90deg, #966333, #312323);  /* Reverse gradient on hover */
+    transform: scale(1.05);  /* Slight zoom effect */
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.4);  /* Stronger shadow on hover */
+}

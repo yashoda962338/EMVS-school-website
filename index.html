@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My School</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body onload="loadLanguage()">
+
+<!-- Language Selection -->
+<div class="language-selector text-center p-3">
+    <button onclick="setLanguage('en')" class="btn btn-success">English</button>
+    <button onclick="setLanguage('mr')" class="btn btn-primary">मराठी</button>
+</div>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src='images/logo.png' alt="My School Logo" class="logo"> 
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html" id="nav-home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html" id="nav-about">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html" id="nav-gallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="events.html" id="nav-events">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html" id="nav-contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="title1">
+    <h2 id="school-name">Ekatmata Madhyamik Vidyalay Shahapur</h2>
+</div>
+
+<!-- Hero Section -->
+<header class="hero-section">
+    <div class="hero-content">
+        <h1 id="hero-title">“Empowering Minds, Building Futures”</h1>
+        <p id="hero-description">Welcome to My School - A place where learning meets excellence!</p>
+        <a href="about.html" class="btn btn-light" id="learn-more">Learn More</a>
+    </div>
+</header>
+
+<!-- About Section -->
+<section class="about-section container text-center my-5">
+    <h2 id="about-title">About Our School</h2>
+    <p id="about-description">We are dedicated to providing a world-class education that fosters innovation, creativity, and leadership.</p>
+    <a href="about.html" class="btn btn-primary" id="read-more">Read More</a>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center p-3">
+    &copy; 2025 My School | All Rights Reserved
+</footer>
+
+<script>
+    const translations = {
+        en: {
+            "nav-home": "Home",
+            "nav-about": "About Us",
+            "nav-gallery": "Gallery",
+            "nav-events": "Events",
+            "nav-contact": "Contact",
+            "school-name": "Ekatmata Madhyamik Vidyalay Shahapur",
+            "hero-title": "Empowering Minds, Building Futures",
+            "hero-description": "Welcome to My School - A place where learning meets excellence!",
+            "learn-more": "Learn More",
+            "about-title": "About Our School",
+            "about-description": "We are dedicated to providing a world-class education that fosters innovation, creativity, and leadership.",
+            "read-more": "Read More"
+        },
+        mr: {
+            "nav-home": "मुख्यपृष्ठ",
+            "nav-about": "आमच्याबद्दल",
+            "nav-gallery": "गॅलरी",
+            "nav-events": "कार्यक्रम",
+            "nav-contact": "संपर्क",
+            "school-name": "एकात्मता माध्यमिक विद्यालय शहापूर",
+            "hero-title": "मनांना बळकटी देणे, भविष्य घडविणे",
+            "hero-description": "आमच्या शाळेत स्वागत - जिथे शिक्षण उत्कृष्टतेला मिळते!",
+            "learn-more": "अधिक जाणून घ्या",
+            "about-title": "आमच्या शाळेबद्दल",
+            "about-description": "आम्ही नाविन्य, सर्जनशीलता आणि नेतृत्वाला चालना देणारे जागतिक दर्जाचे शिक्षण देण्यास समर्पित आहोत.",
+            "read-more": "अधिक वाचा"
+        }
+    };
+
+    function setLanguage(lang) {
+        localStorage.setItem('language', lang);
+        loadLanguage();
+    }
+
+    function loadLanguage() {
+        const lang = localStorage.getItem('language') || 'en';
+        for (const key in translations[lang]) {
+            const element = document.getElementById(key);
+            if (element) {
+                element.textContent = translations[lang][key];
+            }
+        }
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
